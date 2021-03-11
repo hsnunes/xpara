@@ -29,20 +29,20 @@ a {
     color: var(--link-all);
 }
 a:hover {
-    color: var(--link-hover);
+    color: var(--link-all);
 }
 
 .container {
-    width: 98%;
+    width: 90%;
     max-width: 968px;
+    margin: 0 auto;
 }
 
 /* HEADER */
 header {
     width: 100vw;
-    height: 6.0rem;
-    padding: 1rem 0;
-    background-color: yellowgreen;
+    height: 4.5rem;
+    padding: .5rem 0;
 }
 
 header .navbar {
@@ -64,5 +64,36 @@ header nav {
 }
 
 main .more-recents {
+    margin: 1rem 0;
+}
 
+main .more-recents h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 .5rem;
+}
+
+main .more-recents li {
+    margin: .5rem 0;
+}
+
+
+main .list-recents {
+    display: flex;
+}
+
+main .list-recents img {
+    width: 5rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+}
+
+main .list-recents h4 {
+    font-size: 1.6rem;
+    margin: auto 0;
+}
+
+main .list-recents span {
+    display: block;
+    color: gray;
+    font-size: 1.4rem;
 }
