@@ -16,6 +16,7 @@ html {
     font-size: 62.5%;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(230, 230, 230);
 }
 
 body {
@@ -33,17 +34,19 @@ a:hover {
 }
 
 .container {
-    width: 90%;
+    width: 98%;
     max-width: 968px;
     margin: 0 auto;
 }
 
 /* HEADER */
 header {
-    width: 100vw;
+    margin: 0 auto;
+    width: 98%;
     height: 4.5rem;
     padding: .5rem 0;
-    background-color:chartreuse;
+    background-color: white;
+
 }
 
 header .navbar {
@@ -60,21 +63,19 @@ header img {
 
 header nav {
     display: block;
-    background-color: turquoise;
     margin: auto 0;
 }
 
-main {
-    background-color:coral;
-}
-
 main section {
-    margin: 0;
+    margin: .5rem 0;
 }
 
 main section h2 {
     font-size: 2rem;
-    margin: 0;
+    padding:.5rem 1rem 0;
+    text-align: right;
+    border-bottom: 1px solid #B0B300;
+
 }
 
 main section li {
@@ -84,13 +85,8 @@ main section li {
 main section.more-recents,
 main section.artists-recents {
     min-height: 40vh;
-    background-color:aquamarine;
+    background-color:white;
 }
-
-main section.artists-recents {
-    background-color:cadetblue;
-}
-
 
 main .list-recents {
     display: flex;
@@ -116,3 +112,74 @@ main .list-recents span {
 }
 
 /*  Media Queries */
+@media (max-width:540px)
+{
+    header nav {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #000;
+        height: 5px;
+        width: 100%;
+        margin: 5px auto;
+        transition-duration: -3s;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-section.on {
+        position: absolute;
+        background-color: red;
+
+        width: 100vw;
+        height: 100Vh;
+
+        top:0;
+        left: 0;
+
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        top: .5rem;
+        right: 2rem;
+    }
+
+    /* Modificar menu hamburg em X */
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+    }
+
+}
