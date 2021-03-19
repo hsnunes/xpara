@@ -11,3 +11,5 @@ menuToggle.addEventListener("click", ()=>{
     menuSection.classList.toggle("on", show);
     show = !show;
 });
+
+console.log(document.body.scrollTop);

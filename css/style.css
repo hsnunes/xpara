@@ -30,7 +30,7 @@ a:hover {
     color: var(--link-all);
 }
 .container {
-    width: 90%;
+    width: 98%;
     max-width: 968px;
     margin: 0 auto;
     text-align: center;
@@ -55,7 +55,7 @@ header .navbar {
     margin: 0 auto;
 }
 
-header .brand, header .menu-section {
+header .brand{
     width: 100%;
     display: flex;
     align-items: center;
@@ -68,21 +68,14 @@ header .brand img {
 /*  Media Queries */
 @media (max-width:576px)
 {
-
     html {
         font-size: 60%;
         background-color:rgb(230, 230, 230);
     }
 
-    header .menu-toggle {
-        margin-left: auto;
-    }
-    header .menu-section nav {
-        display: none;
-    }
-
     .one,
     .two,
+    .twob,
     .three {
         background-color: rgb(255, 255, 255);
         height: 5px;
@@ -95,40 +88,52 @@ header .brand img {
         height: auto;
         padding: 0;
         margin: 0;
+        cursor: pointer;
+    }
+
+    header .menu-toggle {
+        margin-left: auto;
+    }
+    header .menu-section nav {
+        display: none;
     }
 
     .menu-section.on {
         position: absolute;
-        background-color:darkseagreen;
+        background-color:rgba(234, 204, 248, 0.9);
 
         width: 100vw;
         height: 100vh;
 
-        top: 0;
+        top: 3em;
         left: 0;
 
         /* z-index: 10; */
 
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     }
-/* 
+
     .menu-section.on nav {
         display: block;
     }
 
-    .menu-section.on .menu-toggle {
-        position: absolute;
-        top: -4.2rem;
-        right: 2rem;
-    } */
+    .menu-section.on nav ul li a {
+        cursor: pointer;
+        display: block;
+        color: white;
+        background-color: rgb(138, 23, 67);
+        width: 50%;
+        margin: 1rem 0;
+        padding: 1rem 2rem;
+    }
 
     /* Modificar menu hamburg em X */
     .menu-section.on .menu-toggle .one {
         padding: 0;
         margin: 0;
-        transform: rotate(45deg) translate(7px, 7px);
+        transform: rotate(-45deg) translate(-11px, 11px);
     }
     .menu-section.on .menu-toggle .two {
         padding: 0;
@@ -136,18 +141,105 @@ header .brand img {
         opacity: 0;
     }
     .menu-section.on .menu-toggle .three {
+        transform: rotate(45deg) translate(4px, 4px);
         padding: 0;
         margin: 0;
-        transform: rotate(-45deg) translate(7px, -7px);
     }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -4rem;
+        right: 1rem;
+    }
+
 }
 
-main section {
+/* main section {
     margin: .5rem 0;
     display: none;
-}
-/* 
+} */
 
+.list {display: none;}
+
+.card {
+    width: 100vw;
+    height: auto;
+    text-align: initial;
+    box-shadow: 60px -16px teal;
+}
+.box {
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+
+.card .card-header {
+    display: block;
+    height: 20px;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.card .card-header span {
+    color:lawngreen;
+    background-color: lightcoral;
+}
+
+.card .card-content {
+    width: 98%;
+    padding: 1rem;
+}
+
+.card .content-title {
+    margin-bottom: 1.5rem;
+}
+.card .card-content h2 {
+    display: block;
+    font-weight: bold;
+}
+.card .card-content h4 {
+    display: block;
+    font-weight: 900;
+}
+.card .card-content p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+.card .card-content h4 span {
+    background-color: lawngreen;
+    padding: 2px 5px;
+    margin-left: .5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 
 main section h2 {
@@ -156,8 +248,8 @@ main section h2 {
     text-align: right;
     border-bottom: 1px solid #B0B300;
 
-} */
-/*
+}
+
 main section li {
     margin: .5rem 0;
 }
@@ -166,9 +258,9 @@ main section.more-recents,
 main section.artists-recents {
     min-height: 40vh;
     background-color:white;
-}
+} */
 
-main .list-recents {
+/* main .list-recents {
     display: flex;
 }
 
@@ -189,16 +281,5 @@ main .list-recents span {
     display: block;
     color: gray;
     font-size: 1.4rem;
-}
-
-/* .menu-section nav {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
 } */
-/*
-.menu-section nav ul {
-    display: block;
-    background-color: darkmagenta;
-}
 
