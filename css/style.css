@@ -5,36 +5,23 @@
     --link-hover: #dd7878;
     --bg-acai: #520052;
 }
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: 0;
-}
+* { box-sizing: border-box;margin: 0;padding: 0;outline: 0;}
 html {
-    font-size: 62.5%;
-    height: 100vh;
+    font-size: 62.5%;height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(230, 230, 230);
 }
 body {
-    font-size: 1.6rem;
-    padding-top: 3.3em;
+    font-size: 1.6rem;padding-top: 3.3em;
+    background-color: #CECECE;
 }
 ul { list-style: none; }
-a {
-    text-decoration: none;
-    color: var(--link-all);
-}
-a:hover {
-    color: var(--link-all);
-}
+
 .container {
     width: 98%;
     max-width: 968px;
     margin: 0 auto;
-    text-align: center;
 }
+.d-flex { display: flex; }
 
 /* HEADER */
 header {
@@ -46,24 +33,60 @@ header {
     background-color:var(--bg-acai);
     padding-top: .5rem;
 }
+header img { height: 40px;margin-right: 1rem; }
 
-header .navbar {
-    width: 90%;
-    max-width: 968px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+main {}
+
+#list {
+    background-color: #FFF;
+    height: 100vh;
+    padding: 1rem;
 }
 
-header .brand{
-    width: 100%;
-    display: flex;
-    align-items: center;
+
+#list h2 {
+    padding: .5rem 0 .5rem .5rem;
+    margin-bottom: .8rem;
+    font-size: 2rem;
+    border-bottom: 1px solid #000;
+    background: rgba(24,24,24,.2);
 }
-header .brand img {
-    width: 60px;
-    padding-right: 1rem;
+
+#list div {
+    padding: .5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+#list div:hover {
+    background-color: red;
+}
+
+#list div a {
+    text-decoration: none;
+    color: inherit;
+}
+#list div a:hover {
+    color: var(--bg-acai);
+}
+
+#list div p:last-child {
+    font-size: 1.4rem;
+    font-weight: initial;
+}
+
+
+
+
+
+
+
+
+#display { display: none; }
+
+
 
 /*  Media Queries */
 @media (max-width:576px)
